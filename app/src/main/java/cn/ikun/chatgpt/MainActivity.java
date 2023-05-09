@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
                 Log.i("Test",uri.toString());
-                if(uri.toString().equals("https://github.com/CuberLuo/ikunGPT-Plus")){
+                if(!uri.toString().contains("http://1.15.134.164:999")){
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }else{
